@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "./ui/Icons";
 
 export default function CTA() {
   return (
-    <section className="relative overflow-hidden bg-[var(--primary)] py-14 text-white md:py-20">
+    <section className="relative overflow-hidden bg-[var(--primary)] text-white">
       {/* Grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -13,25 +13,25 @@ export default function CTA() {
         }}
       />
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 text-center">
-        <h2 className="max-w-4xl mx-auto text-3xl font-black leading-tight tracking-tight md:text-5xl reveal-up">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 py-16 md:py-20 lg:py-24 text-center">
+        <h2 className="max-w-4xl mx-auto text-3xl md:text-4xl lg:text-5xl font-black leading-tight tracking-tight reveal-up">
           Ready to modernize the infrastructure your teams depend on?
         </h2>
-        <p className="mt-6 max-w-2xl mx-auto text-white/60 text-lg">
+        <p className="mt-6 max-w-2xl mx-auto text-white/50 text-base sm:text-lg leading-relaxed reveal-up" style={{ transitionDelay: "150ms" }}>
           Let's discuss how UT Solutions can help you build the resilient, scalable
           IT foundation your organization needs to thrive.
         </p>
-        <div className="mt-10 flex flex-wrap justify-center gap-4 reveal-up" style={{ transitionDelay: "200ms" }}>
+        <div className="mt-10 flex flex-wrap justify-center gap-4 reveal-up" style={{ transitionDelay: "300ms" }}>
           <Link
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-[var(--accent)] px-8 py-3.5 text-sm font-extrabold text-white uppercase tracking-wide transition-colors hover:bg-[var(--accent-dark)]"
+            className="inline-flex items-center gap-2 rounded-lg bg-[var(--accent)] px-8 py-3.5 text-sm font-extrabold text-white uppercase tracking-wide transition-all duration-300 hover:bg-[var(--accent-dark)] hover:shadow-lg hover:shadow-red-500/20 hover:-translate-y-0.5"
           >
             Start a Conversation
             <ArrowRightIcon size={16} />
           </Link>
           <Link
             href="#services"
-            className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-extrabold text-white uppercase tracking-wide transition-colors hover:bg-white/10 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-extrabold text-white uppercase tracking-wide transition-all duration-300 hover:bg-white/10 hover:border-white/30 backdrop-blur-sm"
           >
             Explore Services
           </Link>

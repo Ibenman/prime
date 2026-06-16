@@ -19,21 +19,21 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-[var(--slate-50)] py-14 border-y border-[var(--slate-200)] md:py-20">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+    <section id="contact" className="bg-[var(--slate-50)] border-y border-[var(--slate-200)]">
+      <div className="container mx-auto px-4 sm:px-6 py-16 md:py-20 lg:py-24">
+        <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
           {/* Form */}
           <div className="reveal-left">
-            <h2 className="text-3xl md:text-5xl font-black text-[var(--primary)] tracking-tight leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[var(--primary)] tracking-tight leading-tight">
               Get in Touch
             </h2>
-            <p className="mt-4 text-[var(--slate-500)] max-w-lg">
+            <p className="mt-4 text-[var(--slate-500)] max-w-lg leading-relaxed">
               Ready to discuss your infrastructure needs? Our team is here to help you
               design and implement the right solution.
             </p>
 
             {submitted ? (
-              <div className="mt-8 flex flex-col items-center justify-center text-center py-16 rounded-lg border border-[var(--slate-200)] bg-white">
+              <div className="mt-8 flex flex-col items-center justify-center text-center py-16 rounded-lg border border-[var(--slate-200)] bg-white shadow-sm">
                 <div className="w-16 h-16 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 mb-4">
                   <CheckIcon size={32} />
                 </div>
@@ -49,48 +49,48 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="mt-8 space-y-4">
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <div>
-                    <label className="block text-xs font-bold text-[var(--slate-700)] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[var(--slate-700)] uppercase tracking-wider mb-2">
                       Full Name <span className="text-[var(--accent)]">*</span>
                     </label>
                     <input
                       type="text"
                       required
                       placeholder="John Doe"
-                      className="w-full px-4 py-3 rounded-lg border border-[var(--slate-200)] bg-white text-[var(--slate-800)] placeholder:text-[var(--slate-400)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)] transition-all text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-[var(--slate-200)] bg-white text-[var(--slate-800)] placeholder:text-[var(--slate-400)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)] transition-all duration-300 text-sm"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-[var(--slate-700)] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[var(--slate-700)] uppercase tracking-wider mb-2">
                       Email <span className="text-[var(--accent)]">*</span>
                     </label>
                     <input
                       type="email"
                       required
                       placeholder="john@company.com"
-                      className="w-full px-4 py-3 rounded-lg border border-[var(--slate-200)] bg-white text-[var(--slate-800)] placeholder:text-[var(--slate-400)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)] transition-all text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-[var(--slate-200)] bg-white text-[var(--slate-800)] placeholder:text-[var(--slate-400)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)] transition-all duration-300 text-sm"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <div>
-                    <label className="block text-xs font-bold text-[var(--slate-700)] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[var(--slate-700)] uppercase tracking-wider mb-2">
                       Company
                     </label>
                     <input
                       type="text"
                       placeholder="Acme Inc."
-                      className="w-full px-4 py-3 rounded-lg border border-[var(--slate-200)] bg-white text-[var(--slate-800)] placeholder:text-[var(--slate-400)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)] transition-all text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-[var(--slate-200)] bg-white text-[var(--slate-800)] placeholder:text-[var(--slate-400)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)] transition-all duration-300 text-sm"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-[var(--slate-700)] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[var(--slate-700)] uppercase tracking-wider mb-2">
                       Service Interested In
                     </label>
-                    <select className="w-full px-4 py-3 rounded-lg border border-[var(--slate-200)] bg-white text-[var(--slate-800)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)] transition-all text-sm appearance-none">
+                    <select className="w-full px-4 py-3 rounded-lg border border-[var(--slate-200)] bg-white text-[var(--slate-800)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)] transition-all duration-300 text-sm appearance-none">
                       <option value="">Select a service...</option>
                       <option>IT Infrastructure Consulting</option>
                       <option>Managed Infrastructure Services</option>
@@ -104,20 +104,20 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[var(--slate-700)] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[var(--slate-700)] uppercase tracking-wider mb-2">
                     Message <span className="text-[var(--accent)]">*</span>
                   </label>
                   <textarea
                     required
                     rows={4}
                     placeholder="Tell us about your project, timeline, and goals..."
-                    className="w-full px-4 py-3 rounded-lg border border-[var(--slate-200)] bg-white text-[var(--slate-800)] placeholder:text-[var(--slate-400)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)] transition-all text-sm resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-[var(--slate-200)] bg-white text-[var(--slate-800)] placeholder:text-[var(--slate-400)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)] transition-all duration-300 text-sm resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto rounded-lg bg-[var(--accent)] px-8 py-3.5 text-sm font-extrabold text-white uppercase tracking-wide transition-colors hover:bg-[var(--accent-dark)]"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto rounded-lg bg-[var(--accent)] px-8 py-3.5 text-sm font-extrabold text-white uppercase tracking-wide transition-all duration-300 hover:bg-[var(--accent-dark)] hover:shadow-lg hover:shadow-red-500/20 hover:-translate-y-0.5"
                 >
                   <SendIcon size={16} />
                   Send Message
@@ -153,13 +153,13 @@ export default function Contact() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 rounded-lg border border-[var(--slate-200)] bg-white p-4 shadow-sm"
+                  className="flex items-start gap-4 rounded-lg border border-[var(--slate-200)] bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-md"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--accent)] text-white">
                     {item.icon}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="text-xs font-bold text-[var(--slate-400)] uppercase tracking-wider mb-1">
+                    <div className="text-[11px] font-bold text-[var(--slate-400)] uppercase tracking-wider mb-1">
                       {item.label}
                     </div>
                     <div className="text-sm text-[var(--slate-700)] whitespace-pre-line leading-relaxed">

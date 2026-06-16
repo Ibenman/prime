@@ -14,7 +14,7 @@ const services = [
   {
     icon: <ServerIcon size={24} />,
     title: "IT Infrastructure Consulting",
-    description: "End-to-end infrastructure assessment, planning, and modernization. We design resilient, scalable IT foundations that align with your business objectives and growth trajectory.",
+    description: "End-to-end infrastructure assessment, planning, and modernization. We design resilient, scalable IT foundations that align with your business objectives.",
     span: 2,
   },
   {
@@ -26,25 +26,25 @@ const services = [
   {
     icon: <ShieldCheckIcon size={24} />,
     title: "Cyber Resilience & Fortification",
-    description: "Comprehensive cybersecurity solutions including threat assessment, penetration testing, SIEM implementation, and incident response planning to protect your digital assets.",
+    description: "Comprehensive cybersecurity solutions including threat assessment, penetration testing, SIEM implementation, and incident response planning.",
     span: 3,
   },
   {
     icon: <CloudIcon size={24} />,
     title: "Enterprise Cloud & Hybrid Infra",
-    description: "Cloud migration, hybrid architecture design, and multi-cloud management across AWS, Azure, and GCP. Optimize costs while maintaining security and compliance.",
+    description: "Cloud migration, hybrid architecture design, and multi-cloud management across AWS, Azure, and GCP. Optimize costs while maintaining security.",
     span: 2,
   },
   {
     icon: <MonitorIcon size={24} />,
     title: "Advanced Network Implementation",
-    description: "Enterprise-grade network design and deployment including Cisco networking, SD-WAN, Wi-Fi 6E, and structured cabling for seamless connectivity.",
+    description: "Enterprise-grade network design including Cisco networking, SD-WAN, Wi-Fi 6E, and structured cabling for seamless connectivity.",
     span: 2,
   },
   {
     icon: <CableIcon size={24} />,
     title: "Data Center Design & Build",
-    description: "Tier III data center design, construction, and commissioning. From site assessment to full turnkey delivery, we build world-class facilities that meet international standards.",
+    description: "Tier III data center design, construction, and commissioning. From site assessment to full turnkey delivery of world-class facilities.",
     span: 3,
   },
   {
@@ -57,34 +57,34 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-[var(--slate-50)] py-14 scroll-mt-2 border-y border-[var(--slate-200)] md:py-20">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="services" className="bg-[var(--slate-50)] scroll-mt-16 border-y border-[var(--slate-200)]">
+      <div className="container mx-auto px-4 sm:px-6 py-16 md:py-20 lg:py-24">
         {/* Section header */}
-        <div className="container mx-auto mb-10 px-4 text-center sm:px-6 md:mb-14 reveal-up">
-          <h2 className="text-3xl md:text-5xl font-black text-[var(--primary)] tracking-tight leading-tight">
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16 reveal-up">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[var(--primary)] tracking-tight leading-tight">
             Comprehensive Infrastructure
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-[var(--slate-500)]">
+          <p className="mt-4 text-[var(--slate-500)] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
             From data center design to cloud migration, we deliver end-to-end IT infrastructure
             solutions that power enterprise growth across East Africa.
           </p>
         </div>
 
-        {/* Services grid — asymmetric like UT Solutions */}
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-6">
+        {/* Services grid */}
+        <div className="grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-6">
           {services.map((service, i) => {
             const spanClass = service.span === 2 ? "lg:col-span-2" : "lg:col-span-3";
             return (
               <div
                 key={i}
-                className={`group cursor-pointer rounded-lg border border-[var(--slate-200)] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)]/40 hover:shadow-xl sm:p-6 ${spanClass} reveal-up`}
+                className={`group cursor-pointer rounded-lg border border-[var(--slate-200)] bg-white p-5 sm:p-6 shadow-sm transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[var(--accent)]/40 hover:shadow-xl ${spanClass} reveal-up`}
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--slate-100)] text-[var(--primary)] transition-colors duration-300 group-hover:bg-[var(--accent)] group-hover:text-white">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--slate-100)] text-[var(--primary)] transition-all duration-300 group-hover:bg-[var(--accent)] group-hover:text-white group-hover:scale-110">
                     {service.icon}
                   </div>
-                  <h4 className="text-xl font-black text-[var(--primary)] transition-colors group-hover:text-[var(--accent)]">
+                  <h4 className="text-base sm:text-lg font-black text-[var(--primary)] transition-colors duration-300 group-hover:text-[var(--accent)] leading-tight">
                     {service.title}
                   </h4>
                 </div>
@@ -94,7 +94,7 @@ export default function Services() {
                 <div className="flex gap-4 mt-auto pt-4">
                   <Link
                     href="#contact"
-                    className="inline-flex items-center gap-1 text-xs font-bold text-[var(--accent)] uppercase tracking-wide group-hover:gap-2 transition-all"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-[var(--accent)] uppercase tracking-wide transition-all duration-300 hover:gap-2"
                   >
                     Learn more <ChevronRightIcon size={12} />
                   </Link>

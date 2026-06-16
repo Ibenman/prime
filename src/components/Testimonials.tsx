@@ -8,7 +8,7 @@ const testimonials = [
     avatar: "TB",
   },
   {
-    quote: "The network modernization project transformed our operations across 50+ facilities. UT Solutions' team worked around the zero to ensure zero disruption to our services.",
+    quote: "The network modernization project transformed our operations across 50+ facilities. UT Solutions' team worked around the clock to ensure zero disruption to our services.",
     name: "Dr. Sarah Mohammed",
     role: "Director of IT, Ministry of Health",
     avatar: "SM",
@@ -23,29 +23,29 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative z-10 overflow-hidden bg-[var(--primary)] py-14 text-white md:py-20">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section className="bg-[var(--primary)] text-white">
+      <div className="container mx-auto px-4 sm:px-6 py-16 md:py-20 lg:py-24">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 reveal-up">
-          <h2 className="text-3xl font-black tracking-tight text-white md:text-5xl">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 reveal-up">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white">
             Trusted by Industry Leaders
           </h2>
-          <p className="mt-4 text-white/60">
+          <p className="mt-4 text-white/50 text-base sm:text-lg">
             Hear from the organizations that depend on UT Solutions for their critical IT infrastructure.
           </p>
         </div>
 
         {/* Testimonial cards */}
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="flex flex-col p-6 md:p-8 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm reveal-up"
+              className="flex flex-col p-6 sm:p-8 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 ease-out hover:bg-white/10 reveal-up"
               style={{ transitionDelay: `${i * 120}ms` }}
             >
               <QuoteIcon size={32} className="text-white/10 mb-4" />
-              <p className="text-sm text-white/80 leading-relaxed flex-grow">
-                "{t.quote}"
+              <p className="text-sm text-white/75 leading-relaxed flex-grow">
+                &ldquo;{t.quote}&rdquo;
               </p>
               <div className="flex items-center gap-3 mt-6 pt-4 border-t border-white/10">
                 <div className="w-10 h-10 rounded-lg bg-[var(--accent)] flex items-center justify-center text-white text-xs font-black">
@@ -53,7 +53,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <div className="text-sm font-bold text-white">{t.name}</div>
-                  <div className="text-xs text-white/50">{t.role}</div>
+                  <div className="text-xs text-white/40">{t.role}</div>
                 </div>
               </div>
             </div>

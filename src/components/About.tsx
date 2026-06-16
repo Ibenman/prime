@@ -2,12 +2,12 @@ import { BuildingIcon, UsersIcon, AwardIcon, GlobeIcon } from "./ui/Icons";
 
 export default function About() {
   return (
-    <section id="about" className="border-y border-[var(--slate-200)] bg-white py-14 md:py-20">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="about" className="bg-white border-y border-[var(--slate-200)]">
+      <div className="container mx-auto px-4 sm:px-6 py-16 md:py-20 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           {/* Left */}
           <div className="reveal-left">
-            <h2 className="text-3xl md:text-5xl font-black text-[var(--primary)] tracking-tight leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[var(--primary)] tracking-tight leading-tight">
               Ethiopia's Leading Enterprise IT Infrastructure Company
             </h2>
             <div className="mt-6 space-y-4 text-[var(--slate-500)] leading-relaxed">
@@ -42,13 +42,13 @@ export default function About() {
               ].map((stat, i) => (
                 <div
                   key={i}
-                  className="flex flex-col items-center justify-center p-6 rounded-lg border border-[var(--slate-200)] bg-white text-center shadow-sm"
+                  className="flex flex-col items-center justify-center p-6 sm:p-8 rounded-lg border border-[var(--slate-200)] bg-white text-center shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
                 >
                   <div className={`w-14 h-14 rounded-lg ${stat.color} flex items-center justify-center mb-3`}>
                     {stat.icon}
                   </div>
-                  <div className="text-2xl font-black text-[var(--primary)]">{stat.value}</div>
-                  <div className="text-xs font-bold text-[var(--slate-400)] uppercase tracking-wider mt-1">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl font-black text-[var(--primary)]">{stat.value}</div>
+                  <div className="text-[11px] font-bold text-[var(--slate-400)] uppercase tracking-wider mt-1">{stat.label}</div>
                 </div>
               ))}
             </div>

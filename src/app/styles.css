@@ -1,46 +1,46 @@
-/* ===== Scroll Reveal Animations (UT Solutions style) ===== */
+/* ===== Scroll Reveal Animations ===== */
 
 .reveal-up {
   opacity: 0;
-  transform: translateY(50px) translateZ(0);
+  transform: translateY(50px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-up.revealed {
   opacity: 1;
-  transform: translateY(0) translateZ(0);
+  transform: translateY(0);
 }
 
 .reveal-left {
   opacity: 0;
-  transform: translateX(-20px) translateZ(0);
+  transform: translateX(-30px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-left.revealed {
   opacity: 1;
-  transform: translateX(0) translateZ(0);
+  transform: translateX(0);
 }
 
 .reveal-right {
   opacity: 0;
-  transform: translateX(20px) translateZ(0);
+  transform: translateX(30px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-right.revealed {
   opacity: 1;
-  transform: translateX(0) translateZ(0);
+  transform: translateX(0);
 }
 
 .reveal-scale {
   opacity: 0;
-  transform: scale(0.95) translateZ(0);
+  transform: scale(0.95);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .reveal-scale.revealed {
   opacity: 1;
-  transform: scale(1) translateZ(0);
+  transform: scale(1);
 }
 
 .reveal-fade {
@@ -51,22 +51,44 @@
   opacity: 1;
 }
 
+/* Stagger children */
+.stagger-child {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.stagger-child.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Smooth scroll ===== */
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===== Focus ===== */
 *:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid #CF0000;
   outline-offset: 2px;
   border-radius: 4px;
+}
+
+/* ===== Smooth transitions globally ===== */
+section, div, header, footer, nav, main, a, button {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .reveal-up {
-    transform: translateY(30px) translateZ(0);
+    transform: translateY(24px);
   }
   .reveal-left, .reveal-right {
-    transform: translateY(20px) translateZ(0);
+    transform: translateY(16px);
   }
   .reveal-left.revealed, .reveal-right.revealed {
-    transform: translateY(0) translateZ(0);
+    transform: translateY(0);
   }
 }
