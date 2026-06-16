@@ -1,30 +1,34 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+
+export const viewport: Viewport = {
+  themeColor: "#041562",
+};
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./styles.css";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Prime Digital Solutions | Technology Consulting & Innovation",
+  title: "UT Solutions PLC | #1 IT Infrastructure Company in Ethiopia",
   description:
-    "Prime Digital Solutions delivers cutting-edge technology consulting, digital transformation, and software engineering services to enterprises worldwide.",
+    "UT Solutions PLC is Ethiopia's #1 enterprise IT company since 2013. Tier III data center design & build, Cisco enterprise networking, cybersecurity, cloud infrastructure, and 24/7 managed IT services in Addis Ababa. Serving 500+ enterprises across East Africa.",
   keywords: [
-    "technology consulting",
-    "digital transformation",
-    "software engineering",
-    "cloud solutions",
-    "enterprise software",
-    "AI/ML",
-    "cybersecurity",
+    "IT company Ethiopia",
+    "data center Ethiopia",
+    "enterprise networking",
+    "cybersecurity Ethiopia",
+    "cloud infrastructure",
+    "managed IT services",
+    "UT Solutions PLC",
   ],
   openGraph: {
-    title: "Prime Digital Solutions",
+    title: "UT Solutions PLC | #1 IT Infrastructure Company in Ethiopia",
     description:
-      "Technology consulting and digital transformation for the modern enterprise.",
+      "Ethiopia's #1 enterprise IT company since 2013. Tier III data center, Cisco networking, cybersecurity, cloud, and managed IT services.",
     type: "website",
   },
 };
@@ -35,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );

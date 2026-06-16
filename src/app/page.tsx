@@ -2,12 +2,12 @@
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Services from "@/components/Services";
 import About from "@/components/About";
-import Solutions from "@/components/Solutions";
-import Process from "@/components/Process";
-import Partners from "@/components/Partners";
+import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
-import Support from "@/components/Support";
+import Insights from "@/components/Insights";
+import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import useScrollReveal from "@/hooks/useScrollReveal";
@@ -20,12 +20,12 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Services />
         <About />
-        <Solutions />
-        <Process />
-        <Partners />
+        <Projects />
         <Testimonials />
-        <Support />
+        <Insights />
+        <CTA />
         <Contact />
       </main>
       <Footer />
